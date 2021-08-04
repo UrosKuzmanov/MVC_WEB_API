@@ -1,0 +1,32 @@
+
+    {% if call_b_data.genere %}
+        {% include "_back_to_genere.njk" %}
+    {% elif call_b_data.page=='search' %}
+        {% include "_back_to_search.njk" %}
+    {% elif call_b_data.page=='more_filters' %}
+        {% include "_back_to_more_filter.njk" %}
+    {% else %}
+        {% include "_back_to_home.njk" %}
+    {% endif %}
+
+    <section class="wrapper contant_wrapper">
+        <div class="anime_image">
+        <img src="{{anime.image_url}}" alt="">
+        </div>
+        <div class="anime_info">
+           <h1>{{anime.title_english}}</h1>
+            <span>{{anime.title_japanese}}</span>
+            <span>{{anime.premiered}}</span>
+            <span><i class="fas fa-star"></i> {{anime.score}}</span>
+            {% for genre in anime.genres %}
+            <span><a class="genere" href="#genere/view/{{genre.mal_id}}">{{genre.name}}</a></span>
+            {% endfor %}
+            <p>{{anime.synopsis}}</p>
+        </div>
+        <div class="anime_trailer">
+            <div class="trailer_header">
+                <h2>Trailer</h2>
+            </div>
+            <div class="trailer_video"><iframe width="560" height="315" src="{{anime.trailer_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        </div>
+    </section>

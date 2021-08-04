@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+SC:wght@400;700&family=Roboto+Mono:wght@300;400;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="loader">
+        <div id="loader_3">
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div> 
+
+
+    <header>
+        <div class="wrapper header_wrapper">
+            <div class="logo">
+                <img src="./logo3.png" alt="api icon">
+            </div>
+            <div class="search"> <input placeholder="Search Anime by Name" class="search_input" type="text"><i search_icon="" class="fas fa-search icon search_icon"></i></div>
+            <div class="menu_item">
+                <div class="selected"></div>
+                <a href="#home" selected_item="1" id="nav_item_1" class=" nav_item" >Daily Anime</a>
+                <a href="#genere" selected_item="2" id="nav_item_2" class=" nav_item">Anime by Genres</a>
+                <a href="#filters/more_filters" selected_item="3" id="nav_item_3" class=" nav_item">More Filter</a>
+            </div>
+        </div>
+    </header>
+
+    
+    <div class="app_div"></div>
+
+    <footer>
+        <div><a class="footer_div" href="https://jikan.moe/">JIKAN API</a></div>
+        <div class="aa">Copyright&copy;2021 Uros Kuzmanov</div>  
+    </footer>
+    
+    <script src="./js/app.bundle.js"></script>
+</body>
+</html>

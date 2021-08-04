@@ -1,0 +1,37 @@
+
+    <div class="subtitle genere_subtitle">
+        {% if data.page=="more_filters"  %} 
+            {% include "_filter_options.njk" %}   
+        {% endif %}
+
+        {% if data.page=="search"  %} 
+            <p> Result for: {{data.criteria}}</p> 
+        {% endif %}
+    
+        {% for item in generes%}
+            <a href="#genere/view/{{item.mal_id}}" {% if item.mal_id == genere_id  %} id="selected_genere"{% endif %}  class="genere_a {{genere_id}} ">{{item.name}}  </a>
+        {% endfor %}
+    </div>
+    <section class="wrapper contant_wrapper">
+
+       {% for item in anime%}
+            <div class="item_wrapper" anime_info="{{item.mal_id}}">
+                <a 
+                    {% if data.page=="search"  %} 
+                        href="#filters/anime/{{item.mal_id}}/{{data.criteria}}/search"
+                    {% elif data.page=="more_filters"  %}
+                    href="#filters/anime/{{item.mal_id}}/{{data.criteria}}/more_filters"
+                    {% else %}
+                         href="#genere/anime/{{genere_id}}/{{item.mal_id}}"
+                    {% endif %}
+                >
+                    <div class="img">
+                        <div class="imga"> <img src="{{item.image_url}}" alt=""> </div>
+                        <div class="reating abs">{{item.score}}</div>
+                        <div class="info abs"><p class="title">{{item.title}}</p></div>
+                    </div>
+                </a>
+            </div>
+        {% endfor %}
+
+    </section>

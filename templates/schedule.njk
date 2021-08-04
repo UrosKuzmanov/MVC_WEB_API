@@ -1,0 +1,24 @@
+
+    
+    <div class="subtitle">
+       <p> {{day}} </p>
+    </div>
+    <section class="wrapper contant_wrapper">
+      
+        
+        
+        {% for item in anime%}
+        <div class="item_wrapper" anime_info="{{item.mal_id}}">
+            <a href="#home/anime/{{item.mal_id}}">
+            <div class="img">
+                <div class="imga"> <img src="{{item.image_url}}" alt=""> </div>
+                <div class="reating abs">{{item.score}}</div>
+                <div class="info abs"><p class="title">{{item.title}}</p></div>
+                
+
+            </div>
+        </a>
+        </div>
+        {% endfor %}
+
+    </section>

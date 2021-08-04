@@ -1,0 +1,36 @@
+<div class="filter">
+            <div class="filter_item">
+                <p>Chose date of start anima</p>
+                <input type="date" class="start_date">
+            </div>
+            <div class="filter_item" >
+                <p>Chose date of end anima</p>
+                <input class="end_date" type="date">
+            </div>
+            <div class="filter_item" >
+                <p class="chose_score">Chose score</p>
+                <div class="range_wrapper">
+                    <div class="output_wrapper">
+                        <output id="out_min">0</output>
+                        <span id="dush">-</span>
+                        <output id="out_max">10</output>
+                    </div>
+                    <div class="range_line"></div>
+                    <input input_range="" class="min_score" type="range" max="10" min="0" value="0"id="range_value1"  oninput="out_min.value = range_value1.value">
+                    <input input_range="" class="max_score" type="range" max="10" min="0" value="10" id="range_value2" oninput="out_max.value = range_value2.value">
+                </div>
+            </div>
+            
+            <div class="filter_item filter_item_select">
+                <p>Anima rated</p>
+                <select name="" id="rated">
+                    <option value="g">All Ages</option>
+                    <option value="pg">Children</option>
+                    <option value="pg13">Teens 13 or older</option>
+                    <option value="r17">17+ recommended (violence & profanity)</option>
+                    <option value="r">Mild Nudity (may also contain violence & profanity)</option>
+                    <option value="rx">Hentai (extreme sexual content/nudity)</option>
+                </select><span class="sel_arr"></span>
+            </div>
+        </div>
+        <div filter_btn="" class="filter_btn">Show Anime</div>
